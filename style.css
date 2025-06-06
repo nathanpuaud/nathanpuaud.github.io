@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #962c2c; /* Jaune pâle */
+    color: #333;
+}
+
+header {
+    background-color: #bf3235; /* rouge */
+    padding: 15px 0;
+}
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    color: #ffff9e;			/* Jaune */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    transition: font-weight 0.2s ease;
+}
+
+/* Survol des liens : gras sans soulignement */
+nav a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #bf3235;
+}
+
+a {
+    color: #bf3235; /* rouge */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-title a {
+    font-size: 36px;
+    color: #ffff9e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content-box {
+    background-color: #ffff9e; /* jaune */
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo-accueil {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.projet {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.projet img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet img:hover {
+    transform: scale(2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.projet h2 {
+    font-size: 20px;
+    color: #8B0000;
+}
+
+.projet a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #d32f2f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.projet a:hover {
+    text-decoration: underline;
+}
