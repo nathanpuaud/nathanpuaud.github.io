@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #962c2c; /* Jaune pâle */
+    background-color: #FFEBEB; /* Rouge pastel */
     color: #333;
+	font-size: 20px;
 }
 
 header {
@@ -73,10 +74,14 @@ a:hover {
 }
 
 .photo-accueil {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid;
+  color: #bf3235;
+  display: block;
+  margin: 20px auto;
 }
 
 .pdf-frame {
@@ -128,6 +133,158 @@ a:hover {
     color: #d32f2f;
     font-weight: bold;
     text-decoration: none;
+}
+
+.projet a:hover {
+    text-decoration: underline;
+}
+
+.bilan-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.colonne-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-cote {
+    width: 325px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.zone-contenu-avec-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centrer verticalement */
+  gap: 30px;
+  margin: 50px 0;
+  min-height: 400px; /* même hauteur que le carrousel */
+}
+
+.zone-contenu-avec-deux-carousels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+  min-height: 400px;
+}
+
+/* Texte centré */
+.content-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Carrousels identiques */
+.carousel-vertical {
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #FFEBEB;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.carousel-track-vertical {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-vertical 10s linear infinite;
+}
+
+.carousel-vertical img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.carousel-track-vertical.reverse {
+  animation-direction: reverse;
+}
+.titre-section {
+  text-align: center;
+  font-size: 36px;
+  margin: 40px 0 20px;
+  color: #800000;
+}
+
+.flip-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #ffff9e;
+  color: #000;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .projet a:hover {
